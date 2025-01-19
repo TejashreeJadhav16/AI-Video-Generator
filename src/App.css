@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #ff5e62, #ff9966);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Main app container */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Header */
+.app-header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+}
+
+/* Main Section */
+.app-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.text-input {
+  width: 90%;
+  padding: 15px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-input:focus {
+  box-shadow: 0px 8px 12px rgba(0, 123, 255, 0.2);
+  border: 2px solid #ff5e62;
+}
+
+.generate-button {
+  padding: 15px 30px;
+  background-color: #ff5e62;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.generate-button:hover {
+  background-color: #ff9966;
+  transform: translateY(-3px);
+}
+
+.generate-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Video Container */
+.video-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.video-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.generated-video {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 1s ease-out;
+}
+
+/* Footer */
+.app-footer {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 30px;
+  font-weight: 300;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff5e62;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
